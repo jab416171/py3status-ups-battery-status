@@ -14,7 +14,7 @@ class Py3status:
 
     def _get_battery_status(self):
         try:
-            status = self.py3.command_output(["upsc", "battery", "ups.status"])
+            status = self.py3.command_output(["upsc", "battery", "battery.runtime"])
             return {"status": status.strip()}
 
         except self.py3.CommandError as ce:
